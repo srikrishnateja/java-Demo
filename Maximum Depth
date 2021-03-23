@@ -1,0 +1,25 @@
+/**
+ * The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node. </br>
+ * find its maximum depth. 
+ *
+ */
+public class MaximumDepthTree {
+    public class TreNode {
+        int val;
+        TreNode right;
+        TreNode left;
+        TreNode(int x) {
+            val = x;
+        }
+    }
+
+    public int maxDepth(TreNode root) {
+
+        if (root == null) {
+            return 0;
+        }
+        int iLefttDepth = maxDepth(root.left);
+        int iRightDepth = maxDepth(root.right);
+        return (iRightDepth > iLefttDepth) ? iRightDepth + 1 : iLefttDepth + 1;
+    }
+}
