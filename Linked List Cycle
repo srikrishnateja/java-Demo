@@ -1,4 +1,3 @@
-package net.kenyang.algorithm;
 
 
 public class LinkedListCycle {
